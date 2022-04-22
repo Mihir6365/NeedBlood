@@ -1,0 +1,4 @@
+database name is mydb
+collection name is donor_info
+fields are 
+{ name: "Donor_name", address: "Highway 37", phone_no: "6543219875", blood_type: "O+" }
