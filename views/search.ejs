@@ -1,104 +1,115 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <title>Need Blood - Search Here</title>
 </head>
 
 <body>
-    <form action="/search" , method="get">
-        <!-- <label for="fname">blood type:</label>
-        <input type="text" id="blood_type" name="blood_type"><br><br> -->
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Blood Type</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">O+</a>
-                <a href="#">A+</a>
-                <a href="#">B+</a>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a href="./"><img src="/assets/img/Need Blood.png" alt="logo" class="img-fluid"></a>
             </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="getstarted scrollto" href="./">Donate Blood</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
         </div>
+    </header>
+    <!-- End Header -->
+    <br>
+    <br>
+    <div class="container">
+        <form action="/search" , method="get">
+            <div class="mb-3" class="formelem">
+                <label class="form-label">Enter City</label><br>
+                <input type="text" class="formelem" name="city">
+            </div>
 
-        <label for="lname">city</label>
-        <input type="text" id="city" name="city"><br><br>
-        <input type="submit" value="Submit">
 
-    </form>
-</body>
+            <div class="mb-3">
+                <label class="form-label">Enter Blood Group</label><br>
+                <select name="blood_type" class="formelem">  
+               
+                <option>A+ve</option>  
+                <option>A-ve</option>  
+                <option>B+ve</option>  
+                <option>B-ve</option>  
+                <option>O+ve </option>  
+                <option>O-ve </option>  
+                <option>AB+ve </option>    
+                <option>AB-ve </option>   
+              
+                </select>
+            </div>
 
-<!-- <br><br>
-<table>
-    <tr>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
 
-        <td style="margin : 2px,red">
-            city
-        </td>
-        <td style="border : 2px solod red">
-            name
-        </td>
-        <td style="padding : 2px solod red">
-            phone_no
-        </td>
-        <td style="padding : 2px solod red">
-            address
-        </td>
-    </tr>
-
-    <% for(var i=0; i < variable.length; i++) { %>
-        <tr>
-            <td>
-                <%= variable[i].city %>
-            </td>
-            <td>
-                <%= variable[i].name %>
-            </td>
-            <td>
-                <%= variable[i].phone_no %>
-            </td>
-            <td>
-                <%= variable[i].address %>
-            </td>
-            <% } %>
-        </tr>
-</table> -->
-
-<table class="purpleHorizon">
-    <thead>
-        <tr>
-            <th>city</th>
-            <th>name</th>
-            <th>phone_no</th>
-            <th>address</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <td colspan="4">
-                <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
-            </td>
-        </tr>
-    </tfoot>
-    <tbody>
-        <% for(var i=0; i < variable.length; i++) { %>
+    <table class="purpleHorizon">
+        <thead>
             <tr>
-                <td>
-                    <%= variable[i].city %>
-                </td>
-                <td>
-                    <%= variable[i].name %>
-                </td>
-                <td>
-                    <%= variable[i].phone_no %>
-                </td>
-                <td>
-                    <%= variable[i].address %>
-                </td>
-                <% } %>
+                <th>city</th>
+                <th>name</th>
+                <th>phone_no</th>
+                <th>address</th>
             </tr>
-    </tbody>
-</table>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+                </td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <% for(var i=0; i < data.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= data[i].city %>
+                    </td>
+                    <td>
+                        <%= data[i].name %>
+                    </td>
+                    <td>
+                        <%= data[i].phone_no %>
+                    </td>
+                    <td>
+                        <%= data[i].address %>
+                    </td>
+                    <% } %>
+                </tr>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 
 </html>
