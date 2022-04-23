@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="/search" , method="get">
+        <!-- <label for="fname">blood type:</label>
+        <input type="text" id="blood_type" name="blood_type"><br><br> -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Blood Type</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">O+</a>
+                <a href="#">A+</a>
+                <a href="#">B+</a>
+            </div>
+        </div>
+
+        <label for="lname">city</label>
+        <input type="text" id="city" name="city"><br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
+<!-- <br><br>
+<table>
+    <tr>
+
+        <td style="margin : 2px,red">
+            city
+        </td>
+        <td style="border : 2px solod red">
+            name
+        </td>
+        <td style="padding : 2px solod red">
+            phone_no
+        </td>
+        <td style="padding : 2px solod red">
+            address
+        </td>
+    </tr>
+
+    <% for(var i=0; i < variable.length; i++) { %>
+        <tr>
+            <td>
+                <%= variable[i].city %>
+            </td>
+            <td>
+                <%= variable[i].name %>
+            </td>
+            <td>
+                <%= variable[i].phone_no %>
+            </td>
+            <td>
+                <%= variable[i].address %>
+            </td>
+            <% } %>
+        </tr>
+</table> -->
+
+<table class="purpleHorizon">
+    <thead>
+        <tr>
+            <th>city</th>
+            <th>name</th>
+            <th>phone_no</th>
+            <th>address</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="4">
+                <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+            </td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <% for(var i=0; i < variable.length; i++) { %>
+            <tr>
+                <td>
+                    <%= variable[i].city %>
+                </td>
+                <td>
+                    <%= variable[i].name %>
+                </td>
+                <td>
+                    <%= variable[i].phone_no %>
+                </td>
+                <td>
+                    <%= variable[i].address %>
+                </td>
+                <% } %>
+            </tr>
+    </tbody>
+</table>
+
+</html>
