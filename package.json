@@ -18,8 +18,10 @@
     },
     "homepage": "https://github.com/Mihir6365/NeedBlood#readme",
     "dependencies": {
+        "cjs": "^0.0.11",
         "ejs": "^3.1.7",
         "express": "^4.17.3",
-        "mongodb": "^4.5.0"
+        "mongodb": "^4.5.0",
+        "mongoose": "^6.3.1"
     }
 }
