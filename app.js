@@ -21,12 +21,11 @@ app.set("view engine", "ejs");
 //setting up templates folder for storing css
 app.use(express.static("templates"));
 
-var Schema = mongoose.Schema;
+// var Schema = mongoose.Schema;
 
 const dataSchema = {
     Name: String,
     city: String,
-    State: String,
     Phone_no: String,
     blood_type: String
 }
@@ -44,7 +43,6 @@ app.post("/", function(req, res) {
     var newNote = new model({
         Name: req.body.Name,
         city: req.body.City,
-        State: req.body.State,
         Phone_no: req.body.Phone_no,
         blood_type: req.body.blood_type
     });
@@ -80,7 +78,7 @@ app.get("/search", (req, res) => {
 
     //if there is no quert, then render as it is 
     else {
-        res.render("search", { values: " " });
+        res.render("search", { values: "" });
     }
 });
 
